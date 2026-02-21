@@ -525,6 +525,8 @@ body {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   nav ul li {
@@ -537,28 +539,32 @@ body {
 
 }
 /*mobile css*/
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE NAVBAR FIX ================= */
 
 @media (max-width: 768px) {
 
-  .hero {
-    height: auto;
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  .hero-buttons {
+  nav {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .request-btn {
+    margin-top: 10px;
   }
 
 }
