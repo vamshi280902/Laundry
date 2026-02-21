@@ -587,3 +587,6 @@ body {
     }
 
 }
+.nav-links {
+    z-index: 10000;
+}
