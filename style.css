@@ -568,3 +568,25 @@ body {
   }
 
 }
+/* ===== MOBILE NAVBAR CLEAN FIX ===== */
+
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    display: none;   /* Hide menu on mobile */
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+}
