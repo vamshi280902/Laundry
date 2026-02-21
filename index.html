@@ -303,12 +303,11 @@
 <!--mobile-->
 <script>
   const toggle = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector("nav ul");
+  const navMenu = document.querySelector(".nav-links");
 
   toggle.addEventListener("click", () => {
     navMenu.style.display =
       navMenu.style.display === "flex" ? "none" : "flex";
-    navMenu.style.flexDirection = "column";
   });
 </script>
 </body>
