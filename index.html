@@ -10,6 +10,7 @@
 
 <header>
     <nav class="navbar">
+        <div class="menu-toggle">☰</div>
         <div class="logo">
     <img src="images/logo.jpeg" alt="Magic Rinse Logo">
     <span>Magic Rinse Laundry Services</span>
@@ -299,6 +300,16 @@
 </section>
 
 
+<!--mobile-->
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
 
+  toggle.addEventListener("click", () => {
+    navMenu.style.display =
+      navMenu.style.display === "flex" ? "none" : "flex";
+    navMenu.style.flexDirection = "column";
+  });
+</script>
 </body>
 </html>
