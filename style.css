@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;        /* Make navbar stay on top */
+    top: 0;
+    width: 100%;
+    height: 80px;           /* Fix height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 9999;          /* Make sure nothing covers it */
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1e3a8a;
+}
+
+/* Quote Button */
+.quote-btn {
+    padding: 8px 18px;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.quote-btn:hover {
+    background-color: #163172;
+}
+
+/* Home page*/
+.hero {
+    height: calc(115vh - 80px); /* full screen minus navbar */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("images/tataace.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-btn {
+    padding: 12px 25px;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.secondary-btn {
+    padding: 12px 25px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/*Scroll fix*/
+#home,
+#about,
+#services,
+#infrastructure,
+#process,
+#industries,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+/*about*/
+/* About Section */
+.about {
+    padding: 160px 80px;
+    background-color: white;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Left Content */
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.about-points {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-points li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Right Stats */
+.about-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: #f8fafc;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    font-size: 28px;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Services Section */
+.services {
+    height: calc(100vh - 80px);  /* full screen minus navbar */
+    padding: 60px 80px;          /* reduce padding */
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* vertically center */
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-header h2 {
+    font-size: 36px;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.services-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Service Cards */
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* CTA Button */
+.services-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*infrastructure*/
+/* Infrastructure Section */
+.infrastructure {
+    padding: 120px 80px;
+    background-color: white;
+}
+
+.infra-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Left Side */
+.infra-text {
+    flex: 1;
+}
+
+.infra-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+.infra-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.infra-points {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.infra-points li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Capacity Box */
+.capacity-box {
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.capacity-box h3 {
+    font-size: 28px;
+    color: #1e3a8a;
+}
+
+.capacity-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Right Image */
+.infra-image {
+    flex: 1;
+}
+
+.infra-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+/*process*/
+/* Process Section */
+.process {
+    padding: 70px 80px;
+    background-color: #f8fafc;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process-header h2 {
+    font-size: 36px;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.process-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Steps Grid */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Individual Step */
+.step {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Step Number Circle */
+.step-number {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+    font-size: 16px;
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+}
+
+/*contact*/
+/* Contact Section */
+.contact {
+    padding: 120px 80px;
+    background-color: white;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Left Side */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Right Side Form */
+.contact-form {
+    flex: 1;
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #1e3a8a;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+/*logo*/
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;   /* space between image and text */
+}
+
+/* Logo image */
+.logo img {
+    height: 45px;   /* adjust between 40–55px */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Logo text */
+.logo span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3a8a;
+    white-space: nowrap; /* prevents text breaking */
+}
+/*home page points*/
+.hero-points {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.hero-points li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
