@@ -590,3 +590,30 @@ body {
   }
 
 }
+/* ===== CLEAN MOBILE DROPDOWN ===== */
+
+@media (max-width: 768px) {
+
+  nav {
+    position: relative;
+    z-index: 1000;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+}
