@@ -590,3 +590,7 @@ body {
 .nav-links {
     z-index: 10000;
 }
+/*services page over lapping mobile*/
+section {
+  padding: 70px 20px;
+}
